@@ -6,7 +6,7 @@ import { HttpClient, HttpHeaders} from '@angular/common/http'
 })
 
 export class CryptoService {
-  _url= 'https://sandbox-api.coinmarketcap.com/v1/cryptocurrency/listings/latest'
+  _url= 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/historical'
   constructor(
     private http: HttpClient
   ) { 
@@ -15,7 +15,7 @@ export class CryptoService {
   getList(){
     let heades = new HttpHeaders()
       .set('Type-content', 'aplication/json')
-      .set('X-CMC_PRO_API_KEY', 'cd1843a5-f75f-4975-8be2-e6a735b246e9')
+      .set('X-CMC_PRO_API_KEY', 'b54bcf4d-1bca-4e8e-9a24-22ff2c3d462c')
       .set('Access-Control-Allow-Origin',"*")
     
     return this.http.get(this._url, {
