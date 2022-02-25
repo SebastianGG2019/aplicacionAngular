@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit,Renderer2, ViewChild } from '@angular/core';
 import { CryptoService } from '../../services/crypto.service';
+import { Coin } from '../../services/crypto.service';
 
 @Component({
   selector: 'app-api',
@@ -8,11 +9,16 @@ import { CryptoService } from '../../services/crypto.service';
 })
 export class ApiComponent implements OnInit {
 
+  coins: Coin[]= [];
+  coinsSort: Coin[]= [];
+
   constructor(
     private cryptoServices: CryptoService
   ){
     this.cryptoServices.getList().subscribe(resp =>{
       console.log(resp)
+      
+      this.coins = resp;
     },error=>{
       console.log(error)
     })
@@ -20,5 +26,4 @@ export class ApiComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

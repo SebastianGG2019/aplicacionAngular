@@ -1,0 +1,32 @@
+.tabla {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid white;
+    margin: 10px 0 ;
+    border-radius: 5px;
+    padding: 10px;
+    background: white;
+}
+.tabla .imageCoin{
+    width: 13%;
+    height: 100%;
+    margin: 0 20px;
+    font-size: 0;
+}
+.tabla .name{
+    width: 27%;
+}
+
+.tabla .price{
+    width: 34%;
+}
+.tabla .rank{
+    width: 5%;
+}
+.tabla p{
+    margin: 0 20px;
+    color: black;
+    display: block;
+    width: 100%;
+}

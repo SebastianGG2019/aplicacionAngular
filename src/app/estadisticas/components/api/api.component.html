@@ -1,1 +1,9 @@
-<p>api works!</p>
+<div #tablaCoins class="container tableCoins">
+    <div class="tittle"><h3>Top diario Coins</h3></div>
+    <div *ngFor="let coin of coins" class="tabla">
+        <span class="imageCoin"><img src={{coin.image}} alt={{coin.image}}></span>
+        <span class="name"><p>{{coin.name}}</p></span>
+        <span class="price"><p>{{coin.current_price | currency}}</p></span>
+        <span class="rank"><p>{{coin.market_cap_rank}}</p></span>
+    </div>
+</div>
