@@ -1,0 +1,15 @@
+
+<div class="container header-row row">
+    <div class="logo" (click)="AbrirMenu()">
+        <img src="http://assets.stickpng.com/images/588a64f5d06f6719692a2d13.png" alt="">
+    </div>
+    <span><h2>HOME</h2></span>
+    <div #navBar class="navBar">
+        <ul class="nav" >
+            <li class="closeNav"  (click)="CerrarMenu()">x</li>
+            <li  (click)="navegar('/estadisticas')">Estadisticas</li>
+            <li>Twitter zone</li>
+            <li>News</li>
+        </ul>
+    </div>
+</div>
