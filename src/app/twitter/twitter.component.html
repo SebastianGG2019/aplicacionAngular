@@ -1,0 +1,10 @@
+<div #navBar class="navBar">
+    <h1>Selecciona un elemento</h1>
+    <select [(ngModel)]="selectedFeed" (change)="selected()" name="select">
+        <option [value]="item" *ngFor="let item of lista">{{item}}</option>
+    </select>
+</div>
+<ngx-twitter-timeline 
+    [data]="data"
+    [opts]="{tweetLimit: 10}"
+></ngx-twitter-timeline>
