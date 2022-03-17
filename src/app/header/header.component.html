@@ -1,5 +1,6 @@
 
-<div class="container header-row">
+<app-authentication-button></app-authentication-button>
+<div class="container header-row" *ngIf="(auth.isAuthenticated$ | async) === true">
     <div class="logo" (click)="AbrirMenu()">
         <img src="../../assets/588a64f5d06f6719692a2d13.png" alt="">
     </div>
@@ -9,7 +10,6 @@
             <li class="closeNav"  (click)="CerrarMenu()">x</li>
             <li  (click)="navegar('/estadisticas')">Estadisticas</li>
             <li (click)="navegar('/twitter')">Twitter zone</li>
-            <li>News</li>
         </ul>
     </div>
 </div>

@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   
-  constructor(private renderer: Renderer2, private router: Router) { 
+  constructor(private renderer: Renderer2, private router: Router, public auth: AuthService) { 
   }
 
   @ViewChild('navBar') navBar!: ElementRef;
