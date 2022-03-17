@@ -1,0 +1,5 @@
+.timeline-Widget {
+    height: 400px;
+    overflow: auto;
+    margin: 30px 10px;
+}

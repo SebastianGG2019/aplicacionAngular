@@ -1,6 +1,7 @@
 <div #navBar class="navBar">
-    <h1>Selecciona un elemento</h1>
+    <h1>Selecciona un tema de tuu agrado</h1>
     <select [(ngModel)]="selectedFeed" (change)="selected()" name="select">
+        <option selected="selected">Seleccionar</option>
         <option [value]="item" *ngFor="let item of lista">{{item}}</option>
     </select>
 </div>

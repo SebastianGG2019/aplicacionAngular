@@ -1,0 +1,12 @@
+.contenedorSesion p{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color: black;
+}
+.contenedorSesion{
+    padding: 15px;
+    background: white;
+    border: 1px solid;
+    border-radius: 5px;
+}
